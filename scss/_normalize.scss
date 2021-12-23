@@ -1,0 +1,36 @@
+:root {
+	--white: #f2f0f1;
+	--accent-color: #924e34;
+	--bg-color: #2e2e2e;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	// font-family: "PT Sans Narrow", sans-serif;
+	// font-weight: bold;
+	box-sizing: border-box;
+	// -webkit-tap-highlight-color: var(--season-color-select);
+}
+
+// @font-face {
+// 	font-family: "Digital-7";
+// 	src: url("../IMG/font/digital-7.eot");
+// 	src: url("../IMG/font/digital-7.ttf") format("truetype"), url("../IMG/font/digital-7.woff") format("woff"),
+// 		url("../IMG/font/digital-7.woff2") format("woff2");
+// 	font-style: normal;
+// 	font-weight: normal;
+// }
+
+// ::selection {
+// 	background-color: var(--season-color-select);
+// }
+
+button,
+a {
+	appearance: none;
+	outline: none;
+}
