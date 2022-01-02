@@ -2,6 +2,10 @@
 	--white: #f2f0f1;
 	--accent-color: #924e34;
 	--bg-color: #2e2e2e;
+
+	--white2: #dad8d9;
+
+	--transition: 0.2s linear;
 }
 
 *,
@@ -10,27 +14,222 @@
 	margin: 0;
 	padding: 0;
 	border: 0;
-	// font-family: "PT Sans Narrow", sans-serif;
-	// font-weight: bold;
+	font-family: Montserrat;
+	font-style: normal;
 	box-sizing: border-box;
-	// -webkit-tap-highlight-color: var(--season-color-select);
+	// -webkit-tap-highlight-color: var(--bg-color-65);
+	-webkit-tap-highlight-color: transparent;
 }
 
-// @font-face {
-// 	font-family: "Digital-7";
-// 	src: url("../IMG/font/digital-7.eot");
-// 	src: url("../IMG/font/digital-7.ttf") format("truetype"), url("../IMG/font/digital-7.woff") format("woff"),
-// 		url("../IMG/font/digital-7.woff2") format("woff2");
-// 	font-style: normal;
-// 	font-weight: normal;
+@font-face {
+	font-family: "The-Brands";
+	src: url("/font/TheBrands.eot");
+	src: url("/font/TheBrands.ttf") format("truetype"), url("/font/TheBrands.woff") format("woff"),
+		url("/font/TheBrands.woff2") format("woff2");
+	font-style: normal;
+	font-weight: normal;
+}
+
+::selection {
+	background-color: var(--bg-color-65);
+}
+
+header *::selection {
+	background-color: var(--white-25);
+}
+
+html {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg-color);
+	font-size: 10px;
+	// font-size: 2.405vmin; /*10px*/
+	scroll-behavior: smooth;
+}
+// @media (max-height: 1000px) {
+// 	html {
+// 		font-size: 0.9vmin;
+// 	}
 // }
 
-// ::selection {
-// 	background-color: var(--season-color-select);
-// }
+body {
+	position: relative;
+	// width: 416px;
+	// height: 896px;
+	width: 100vw;
+
+	height: 100vh;
+	// box-shadow: 0px 0px 30px #000000;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--white);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--accent-color);
+	border-radius: 20px;
+	border: 2px solid var(--white);
+}
 
 button,
 a {
 	appearance: none;
 	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	background: none;
+	border: 0;
+}
+
+main {
+	position: relative;
+	height: 100%;
+	transition: all 0.2s linear;
+}
+main.blur {
+	opacity: 0.5;
+	filter: blur(5px);
+	pointer-events: none;
+}
+
+@media (min-width: 768px) {
+	main.blur {
+		opacity: 1;
+		filter: blur(0px);
+		pointer-events: painted;
+	}
+}
+
+button.sign {
+	// font-size: 24px;
+	padding: 0.75em 1.5em;
+	cursor: pointer;
+
+	background-color: var(--accent-color);
+	box-shadow: 0 0 0 calc(1em / 24 * 1) var(--white);
+	border-radius: 0px 1.08em;
+	transition: all 0.2s linear;
+
+	font-weight: bold;
+	color: var(--white);
+	&:hover,
+	&:focus-visible {
+		box-shadow: 0 0 0 calc(1em / 24 * 3) var(--white);
+		border-radius: 1.08em 0px;
+	}
+}
+
+.conteiner {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto;
+	// max-width: 114rem;
+}
+
+.scissor {
+	pointer-events: none;
+	// transform: scale(2);
+	--dur: 1s;
+	path {
+		// &:nth-child()
+		transform-origin: 45% 50%;
+		&:nth-child(1),
+		&:nth-child(2) {
+			// transform: rotate(-23deg);
+			animation: blade1 var(--dur) linear both;
+		}
+		&:nth-child(3) {
+			animation: blade2 var(--dur) linear both;
+			// transform: rotate(22deg);
+		}
+		// &:nth-child(4)
+	}
+}
+
+@keyframes blade1 {
+	25% {
+		transform: rotate(15deg);
+	}
+	75% {
+		transform: rotate(-23deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes blade2 {
+	25% {
+		transform: rotate(-15deg);
+	}
+	75% {
+		transform: rotate(22deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+@media (max-height: 550px) {
+	main {
+		.info {
+			.img {
+				display: none;
+			}
+		}
+	}
+}
+
+@media (min-width: 1500px) {
+	main {
+		.links {
+			// padding-left: 30px;
+			// padding-right: 30px;
+
+			padding-left: var(--padding-L);
+			padding-right: var(--padding-L);
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	::-webkit-scrollbar {
+		width: 0px;
+	}
+}
+
+.instagram {
+	position: relative;
+	display: block;
+	width: var(--size);
+	height: var(--size);
+
+	background: radial-gradient(100% 100% at 0% 100%, #feda75 0%, #fa7e1e 25%, #d62976 60%, #962fbf 125%, #4f5bd5 150%);
+	border-radius: 10px;
+	opacity: 0.75;
+	transition: all var(--transition);
+	&:hover,
+	&:focus-visible {
+		opacity: 1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		width: 75%;
+		height: 75%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: center/cover url(/img/Instagram.svg);
+	}
 }

@@ -1,0 +1,264 @@
+:root {
+	--redL: #ff0000;
+	--blueL: #0029ff;
+	--whiteL: #fff;
+}
+
+.loader {
+	top: 0;
+	// left: 0;
+	position: fixed;
+	// display: none;
+	// width: 416px;
+	width: 100vw;
+	height: 100%;
+	z-index: 10000000;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--bg-color);
+	box-shadow: inset 0px 0px 25vmin #000000;
+	transition: opacity 0.5s linear;
+	.icon {
+		position: relative;
+
+		width: 67px;
+		height: 278px;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		margin-bottom: 60px;
+		.lamp {
+			position: relative;
+			width: 65px;
+			height: 65px;
+			background-color: #fff;
+			box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff,
+				0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 130px #ffffff, 0px 0px 20px rgba(0, 0, 0, 0.1),
+				inset 0px 0px 25px #ffffff;
+			border-radius: 50%;
+			&::after {
+				content: "";
+				position: absolute;
+				width: 110%;
+				height: 110%;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				opacity: 0.1;
+				animation: lamp 5s linear both;
+
+				background: #fff;
+				box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff,
+					0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 135px #ffffff;
+				border-radius: 118.681px;
+			}
+		}
+		.metal {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			div {
+				background: linear-gradient(
+					90deg,
+					#76818a 0%,
+					#aeb6bc 8%,
+					#fdfcf3 17%,
+					#fdfcf3 36%,
+					#aeb6bc 55%,
+					#2f2d32 85%,
+					#2f2d32 90%,
+					#121212 100%
+				);
+			}
+			&:nth-child(2) {
+				div {
+					box-shadow: 0px -1.75px 2.7px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(255, 255, 255, 0.2);
+				}
+				div:nth-child(1) {
+					width: 35px;
+					height: 4px;
+					border-radius: 2.5px 2.5px 0px 0px;
+				}
+				div:nth-child(2) {
+					width: 48px;
+					height: 9px;
+					border-radius: 2.5px 2.5px 0px 0px;
+				}
+				div:nth-child(3) {
+					width: 57px;
+					height: 13px;
+					border-radius: 2.5px 2.5px 4.5px 4.5px;
+				}
+				div:nth-child(4) {
+					width: 48px;
+					height: 7px;
+					border-radius: 0px 0px 2.5px 2.5px;
+				}
+				div:nth-child(5) {
+					width: 45px;
+					height: 4px;
+					border-radius: 0px 0px 2.5px 2.5px;
+				}
+			}
+			&:nth-child(4) {
+				div:nth-child(1),
+				div:nth-child(2) {
+					box-shadow: 0px 1.75px 2.6px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(0, 0, 0, 0.2);
+				}
+
+				div:nth-child(3) {
+					box-shadow: 0px 1.75px 6px rgba(0, 0, 0, 0.5), inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+				}
+				div:nth-child(4) {
+					box-shadow: 0px 1.75px 3px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(0, 0, 0, 0.6);
+				}
+
+				div:nth-child(1) {
+					width: 45px;
+					height: 5px;
+					border-radius: 2.5px 2.5px 0px 0px;
+				}
+				div:nth-child(2) {
+					width: 50px;
+					height: 7px;
+					border-radius: 2.5px 2.5px 0px 0px;
+				}
+				div:nth-child(3) {
+					width: 57px;
+					height: 13px;
+					border-radius: 4.5px 4.5px 2.5px 2.5px;
+				}
+				div:nth-child(4) {
+					width: 50px;
+					height: 25px;
+					border-radius: 0px 0px 22px 22px;
+				}
+			}
+		}
+		.gradient {
+			position: relative;
+			width: 30px;
+			height: 130px;
+
+			--angle: 60deg;
+			background: repeating-linear-gradient(
+				var(--angle),
+				var(--whiteL) 0 10px,
+				var(--redL) 10px 20px,
+				var(--whiteL) 20px 30px,
+				var(--blueL) 30px 40px
+			);
+			box-shadow: inset 10px 0px 16px rgba(255, 255, 255, 0.25), inset -5px 0px 8px rgba(0, 0, 0, 0.25);
+			// 	--d: 145px;
+			// 	--sinus: 0.81915204;
+			// background-size: calc(var(--d) / var(--sinus)) 100%;
+			// animation: barberColors 10s reverse linear infinite;
+
+			background-size: 156% 100%;
+			animation: barberColorss 50s reverse linear infinite;
+
+			&::before,
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 1;
+			}
+			&::before {
+				background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 50%, #ffffff 100%);
+				box-shadow: inset -1.75px 0px 5px #ffffff, inset 1.75px 0px 5px #ffffff;
+			}
+			&::after {
+				box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff,
+					0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 135px #ffffff, inset 0px 0px 15px #ffffff,
+					inset 0px 0px 5px #ffffff;
+			}
+		}
+	}
+
+	.load {
+		position: relative;
+		width: 75%;
+		width: 316px;
+		height: 7px;
+		border-radius: 25px;
+		background-color: var(--white);
+		box-shadow: 0px 0px 10px #000000, inset 0px 0px 4px #000000;
+		&::after {
+			content: "";
+			left: 0;
+			position: absolute;
+			width: 0%;
+			height: 100%;
+
+			border-radius: 25px;
+			--d: 145px;
+			--angle: 35deg;
+			--sinus: 0.81915204;
+			background: repeating-linear-gradient(
+				var(--angle),
+				var(--whiteL) 0 25px,
+				var(--redL) 25px 50px,
+				var(--whiteL) 50px 75px,
+				var(--blueL) 75px 100px
+			);
+			background-size: calc(var(--d) / var(--sinus)) 100%;
+			box-shadow: 0px 0px 5px var(--whiteL), 0px 0px 15px var(--whiteL), 0px 0px 25px var(--whiteL),
+				0px 0px 45px var(--whiteL), 0px 0px 65px var(--whiteL), 0px 0px 90px var(--whiteL),
+				0px 0px 135px var(--whiteL), inset 0px 0px 15px var(--whiteL), inset 0px 0px 5px var(--whiteL);
+			animation: barberColors 1s linear infinite, load 3s ease-in-out both;
+		}
+	}
+
+	&.del {
+		opacity: 0;
+		pointer-events: none;
+		.gradient,
+		.load::after {
+			animation-play-state: paused;
+		}
+	}
+}
+
+@keyframes barberColors {
+	100% {
+		background-position: calc(var(--d) / var(--sinus)) 100%;
+	}
+}
+
+@keyframes barberColorss {
+	100% {
+		background-position: -10000% 100%;
+	}
+}
+
+@keyframes load {
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes lamp {
+	100% {
+		opacity: 0.7;
+	}
+}
+
+@media (max-height: 400px) {
+	.loader {
+		.icon {
+			transform: scale(0.5);
+			margin-bottom: 0px;
+		}
+		.load {
+			transform: scale(0.5);
+		}
+	}
+}
