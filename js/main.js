@@ -1,6 +1,6 @@
 //Preloader
 let log = false
-if (getRandomInt(10) - 9 > 0) localStorage.removeItem('loader')
+if (getRandomInt(10) - 6 > 0) localStorage.removeItem('loader')
 if (!localStorage.getItem('loader')) {
 	document.querySelector('head').innerHTML += `<link rel="stylesheet" href="/css/loader.css" type="text/css">`
 	document.querySelector('body').innerHTML += `<section class="loader">
