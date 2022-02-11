@@ -1,0 +1,65 @@
+[
+	{
+		"img": "/IMG/works/T24Ed7-min.jpg",
+		"name": "Чоловіча стрижка",
+		"price": {
+			"value": 100,
+			"currency": "грн"
+		},
+		"date": "23.11.2021"
+	},
+	{
+		"img": "/IMG/works/photo_1.jpg",
+		"name": "Стрижка лайт",
+		"price": {
+			"value": 140,
+			"currency": "грн"
+		},
+		"date": "20.11.2021"
+	},
+	{
+		"img": "/IMG/works/photo_2.jpg",
+		"name": "Стрижка лайт",
+		"price": {
+			"value": 190,
+			"currency": "грн"
+		},
+		"date": "05.11.2021"
+	},
+	{
+		"img": "/IMG/works/photo_3.jpg",
+		"name": "Чоловіча стрижка",
+		"price": {
+			"value": 100,
+			"currency": "грн"
+		},
+		"date": "22.11.2021"
+	},
+	{
+		"img": "/IMG/works/m899gw-min.jpg",
+		"name": "Стрижка лайт",
+		"price": {
+			"value": 100,
+			"currency": "грн"
+		},
+		"date": "02.12.2021"
+	},
+	{
+		"img": "/IMG/works/fWyifW-min.jpg",
+		"name": "Камуфлювання сивини",
+		"price": {
+			"value": 100,
+			"currency": "грн"
+		},
+		"date": "04.12.2021"
+	},
+	{
+		"img": "/IMG/works/original_5cf5faba86dba64e0b1ed811_5cf5fc2656cd4-min.jpg",
+		"name": "Чоловіча стрижка",
+		"price": {
+			"value": 180,
+			"currency": "грн"
+		},
+		"date": "14.12.2021"
+	}
+]

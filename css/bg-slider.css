@@ -8,7 +8,7 @@
   pointer-events: none;
 }
 
-.slider__item img {
+.slider__item {
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
@@ -19,11 +19,11 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-transition: opacity 0.5s linear;
-  transition: opacity 0.5s linear;
+  -webkit-transition: opacity 1s linear;
+  transition: opacity 1s linear;
 }
 
-.slider__item.active img {
+.slider__item.active {
   opacity: 1;
 }
 

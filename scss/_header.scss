@@ -11,7 +11,7 @@ html {
 	height: var(--header-H);
 	background-color: var(--bg-color);
 	z-index: 100000;
-	box-shadow: 0px 3px 0px var(--accent-color), 0px 4px 25px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 3px 0px var(--accent-color), 0px 4px 50px rgba(0, 0, 0, 0.25);
 	--padding-R: 30px;
 	--padding-L: 20px;
 	.conteiner {
@@ -48,7 +48,7 @@ html {
 			width: 100%;
 			height: 100%;
 			background: var(--bg-color-25);
-			backdrop-filter: blur(5px);
+			backdrop-filter: blur(10px);
 			opacity: 0;
 			transition: all var(--transition);
 			z-index: -10;
@@ -78,7 +78,7 @@ html {
 			text-align: center;
 			a {
 				position: relative;
-				color: #f2f0f1;
+				color: var(--white);
 				opacity: 0.75;
 				transition: all var(--transition);
 				&:last-child {
@@ -103,7 +103,7 @@ html {
 				&:focus-visible,
 				&:target,
 				&.active {
-					color: #f2f0f1;
+					color: var(--white);
 					opacity: 1;
 					text-shadow: 0px 0px 50px #ffffff, 0px 0px 15px #ffffff, 0px 0px 5px #ffffff;
 					&::before {
@@ -113,6 +113,9 @@ html {
 			}
 			&:not(:last-child) {
 				margin-bottom: 3.5rem;
+			}
+			&:nth-last-child(2) {
+				margin-bottom: 0;
 			}
 		}
 	}
@@ -127,6 +130,9 @@ html {
 				background: var(--bg-color-90);
 			}
 		}
+	}
+	.icon-sign {
+		display: none;
 	}
 }
 
@@ -251,15 +257,21 @@ button.navigation {
 		path:nth-child(1),
 		path:nth-child(2) {
 			transform-origin: center 60%;
-			transform: scale(0.5) rotate(90deg) translate(0, 3%) scaleY(-1);
+			transform: scale(0.5) rotate(90deg) translate(-8%, 3%) scaleY(-1);
 		}
 		path:nth-child(1) {
-			transform: scale(0.5) rotate(90deg) translate(3%, -3%) scaleY(-1);
+			transform: scale(0.5) rotate(90deg) translate(-6%, -3%) scaleY(-1);
 		}
 		path:nth-child(3),
 		path:nth-child(4) {
 			transform: scale(0.5) translate(20%, -20%);
 		}
+	}
+}
+
+@media (max-width: 300px) {
+	.header .logo .img {
+		display: none;
 	}
 }
 
@@ -307,19 +319,24 @@ button.navigation {
 				padding: 0;
 				font-size: 20px;
 				font-size: 2em;
+				padding-right: var(--padding-R);
+				& > * {
+					margin-left: 2em;
+				}
 			}
 			&__item {
-				margin-left: 2em;
 				&:not(:last-child) {
 					margin-bottom: 0;
 				}
-				&:last-child {
-					padding-right: var(--padding-R);
-				}
+				// &:last-child {
+				// }
 				a {
 					opacity: 1;
 				}
 			}
+		}
+		.icon-sign {
+			display: inline-block;
 		}
 	}
 }

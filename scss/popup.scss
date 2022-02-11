@@ -1,0 +1,215 @@
+.popup {
+	font-size: 1vmin;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: var(--bg-color);
+	// background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--bg-color);
+	padding: 7rem 0 8rem !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 100000000;
+	opacity: 0;
+	transition: opacity 0.5s linear;
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: painted;
+	}
+	&.hidden {
+		visibility: hidden;
+		pointer-events: none;
+		opacity: 0;
+	}
+
+	&__slider {
+		// position: relative;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		&-item {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			object-fit: cover;
+			pointer-events: none;
+			transition: all 0.5s linear;
+			&.active {
+				pointer-events: painted;
+				opacity: 1;
+			}
+			&.re-size {
+				object-fit: contain;
+			}
+		}
+	}
+	.name {
+		position: relative;
+		font-size: 3.6rem;
+		padding: 1rem;
+		width: 100%;
+		box-shadow: 0 0 0 1px var(--white);
+		transition: all var(--transition);
+		z-index: 1;
+		cursor: pointer;
+		&.visible {
+			opacity: 1;
+			// transform: translateY(-200%);
+		}
+		&.hidden {
+			opacity: 0;
+		}
+	}
+	.price {
+		position: relative;
+		font-size: 5.5rem;
+		padding: 1rem 3rem;
+		font-weight: bold;
+		box-shadow: 0 0 0 3px var(--white);
+		margin-bottom: 1.5rem;
+		margin-top: auto;
+		&::after {
+			position: absolute;
+			content: attr(data-currency);
+			top: -25%;
+			right: -30%;
+			background-color: inherit;
+			font-size: 3rem;
+			padding: 0 1rem 0.5rem;
+			box-shadow: inherit;
+		}
+	}
+	.date {
+		font-size: 1.8rem;
+		padding: 1rem 1.2rem;
+	}
+
+	.name,
+	.price,
+	.date {
+		text-align: center;
+		color: var(--white);
+		background-color: var(--accent-color);
+	}
+
+	.close {
+		position: relative;
+		margin-top: 4.5rem;
+		width: 4.5rem;
+		height: 4.5rem;
+		transform: rotate(45deg);
+		cursor: pointer;
+		transition: transform var(--transition);
+		z-index: 100000;
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+			width: 130%;
+			height: 3px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: var(--white);
+		}
+		&::before {
+			transform: translate(-50%, -50%) rotate(-90deg);
+		}
+		&:focus-visible,
+		&:hover {
+			transform: rotate(45deg) scale(1.2);
+		}
+	}
+	.arrows {
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		pointer-events: none;
+		opacity: 0;
+		&__item {
+			position: relative;
+			width: 30%;
+			height: 100%;
+			cursor: pointer;
+			transition: transform var(--transition);
+			// z-index: 1;
+			outline: none;
+			appearance: none;
+			// background-color: red;
+			--padding-arrows: 2rem;
+			--arrow-size: 2.5rem;
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				left: var(--padding-arrows);
+				top: 50%;
+				width: 3px;
+				height: var(--arrow-size);
+				background-color: var(--white);
+				// background-color: red;
+				// transform: skew(-25deg) translateY(-50%);
+			}
+			&.prev {
+				transform-origin: center left;
+				&::after {
+					transform: translateY(-49%) skew(-25deg);
+				}
+				&::before {
+					transform: translateY(49%) skew(25deg);
+				}
+			}
+			&.next {
+				transform-origin: center right;
+				&::after,
+				&::before {
+					left: auto;
+					right: var(--padding-arrows);
+				}
+				&::after {
+					transform: translateY(-49%) skew(25deg);
+				}
+				&::before {
+					transform: translateY(49%) skew(-25deg);
+				}
+			}
+			&:focus-visible,
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+	&.list .arrows {
+		opacity: 1;
+		&__item {
+			pointer-events: painted;
+		}
+	}
+}
+
+@media (min-width: 1024px), (orientation: landscape) {
+	.popup {
+		padding-top: 1rem;
+
+		.close,
+		.price,
+		.date {
+			margin-left: auto;
+			margin-right: 10rem;
+			// transform: translateX(-10vw);
+		}
+	}
+}

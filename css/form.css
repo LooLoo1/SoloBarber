@@ -1,0 +1,626 @@
+:root {
+  --horisontal-padding: 2rem;
+}
+
+.form {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding-top: var(--header-H);
+}
+
+.form__item {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), var(--bg-color);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--bg-color);
+  position: absolute;
+  inset: 0;
+  padding-top: var(--header-H);
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  visibility: hidden;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transition: opacity 0.2s linear -0.1s;
+  transition: opacity 0.2s linear -0.1s;
+  padding-bottom: calc(2.4rem + (5.5rem * 2) + (0.75 * 2.4rem * 2));
+}
+
+.form__item .services {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), var(--bg-color);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), var(--bg-color);
+}
+
+.form__item .list {
+  padding-bottom: 0;
+  margin-bottom: 3.5rem;
+}
+
+.form__item .list input {
+  position: static !important;
+}
+
+.form__item .list input:hover + label,
+.form__item .list input:checked + label {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form__item .list input:checked + label .name::before {
+  -webkit-box-shadow: 0px 0px 1px var(--white), 0px 0px 7px var(--white), 0px 0px 15px var(--white), 0px 0px 30px var(--white);
+          box-shadow: 0px 0px 1px var(--white), 0px 0px 7px var(--white), 0px 0px 15px var(--white), 0px 0px 30px var(--white);
+}
+
+.form__item .list input:checked:focus-visible + label {
+  -webkit-box-shadow: 0px 0px 20px var(--accent-color);
+          box-shadow: 0px 0px 20px var(--accent-color);
+}
+
+.form__item > *:not(.form__bg) {
+  position: relative;
+  z-index: 1;
+}
+
+.form__item.end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: var(--header-H);
+  z-index: 1;
+}
+
+.form__item.end .form__img {
+  margin-bottom: 2em;
+  -webkit-transform: rotate(65deg);
+          transform: rotate(65deg);
+  -webkit-animation: img-levitation 8s ease-in infinite both alternate;
+          animation: img-levitation 8s ease-in infinite both alternate;
+}
+
+.form__item.end .form__p {
+  margin-bottom: 2.2em;
+}
+
+.form__title {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: var(--white);
+  padding: var(--horisontal-padding);
+}
+
+.form__p {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-align: center;
+  color: var(--white);
+}
+
+.form__img {
+  position: relative;
+  width: 25vmin;
+  height: 25vmin;
+}
+
+.form__img svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  -webkit-transform: scale(2) rotate(0deg);
+          transform: scale(2) rotate(0deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.form__img svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+.form__img svg path:nth-child(1) {
+  fill: var(--white2);
+}
+
+.form__img svg path:nth-child(2),
+.form__img svg path:nth-child(3) {
+  fill: var(--white);
+}
+
+.form__img svg path:nth-child(4) {
+  fill: var(--bg-color);
+}
+
+.form__img svg path:nth-child(1),
+.form__img svg path:nth-child(2) {
+  -webkit-transform: scale(0.5) scaleY(-1);
+          transform: scale(0.5) scaleY(-1);
+}
+
+.form__img:hover svg, .form__img.active svg {
+  -webkit-transform: scale(2) rotate(135deg);
+          transform: scale(2) rotate(135deg);
+}
+
+.form__img:hover svg path:nth-child(1),
+.form__img:hover svg path:nth-child(2), .form__img.active svg path:nth-child(1),
+.form__img.active svg path:nth-child(2) {
+  -webkit-transform-origin: center 60%;
+          transform-origin: center 60%;
+  -webkit-transform: scale(0.5) rotate(90deg) translate(-8%, 3%) scaleY(-1);
+          transform: scale(0.5) rotate(90deg) translate(-8%, 3%) scaleY(-1);
+}
+
+.form__img:hover svg path:nth-child(1), .form__img.active svg path:nth-child(1) {
+  -webkit-transform: scale(0.5) rotate(90deg) translate(-6%, -3%) scaleY(-1);
+          transform: scale(0.5) rotate(90deg) translate(-6%, -3%) scaleY(-1);
+}
+
+.form__img:hover svg path:nth-child(3),
+.form__img:hover svg path:nth-child(4), .form__img.active svg path:nth-child(3),
+.form__img.active svg path:nth-child(4) {
+  -webkit-transform: scale(0.5) translate(20%, -20%);
+          transform: scale(0.5) translate(20%, -20%);
+}
+
+.form__bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.form__bg * {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  opacity: 0.85;
+}
+
+.form__bg .form__img {
+  position: absolute !important;
+  margin: 0 !important;
+  -webkit-animation-play-state: paused !important;
+          animation-play-state: paused !important;
+  -webkit-transform: rotate(var(--rotate)) !important;
+          transform: rotate(var(--rotate)) !important;
+  top: calc(var(--top) - 25vmin);
+  left: calc(var(--left) - 25vmin);
+  -webkit-transition: top 0.5s linear;
+  transition: top 0.5s linear;
+}
+
+.form__sub-title {
+  display: block;
+  font-weight: bold;
+  font-size: 1.8rem;
+  padding: 0 var(--horisontal-padding) 0.34em;
+  color: var(--white);
+  -webkit-box-shadow: 0 3px 0 var(--accent-color);
+          box-shadow: 0 3px 0 var(--accent-color);
+}
+
+.form__sub-title.calendar {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+}
+
+.form__sub-title.calendar span {
+  color: var(--white);
+  position: absolute;
+  left: var(--horisontal-padding);
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+}
+
+.form__sub-title.calendar span:nth-child(2) {
+  opacity: 0;
+}
+
+.form__sub-title.calendar::after, .form__sub-title.calendar::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: calc(50% - 0.25rem);
+  background-color: var(--white);
+  right: 2.3rem;
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+}
+
+.form__sub-title.calendar::after {
+  top: 0rem;
+  -webkit-transform: skew(25deg);
+          transform: skew(25deg);
+}
+
+.form__sub-title.calendar::before {
+  bottom: 0.6rem;
+  -webkit-transform: skew(-25deg);
+          transform: skew(-25deg);
+}
+
+.form__sub-title.record {
+  padding: 0.34em var(--horisontal-padding) 0;
+  -webkit-box-shadow: 0 -3px 0 var(--accent-color);
+          box-shadow: 0 -3px 0 var(--accent-color);
+}
+
+.form input[type="checkbox"]:checked + .form__sub-title.calendar span:nth-child(1) {
+  opacity: 0;
+}
+
+.form input[type="checkbox"]:checked + .form__sub-title.calendar span:nth-child(2) {
+  opacity: 1;
+}
+
+.form input[type="checkbox"]:checked + .form__sub-title.calendar::after {
+  -webkit-transform: skew(-25deg);
+          transform: skew(-25deg);
+}
+
+.form input[type="checkbox"]:checked + .form__sub-title.calendar::before {
+  -webkit-transform: skew(25deg);
+          transform: skew(25deg);
+}
+
+.form input[type="checkbox"]:focus-visible + .form__sub-title.calendar::after, .form input[type="checkbox"]:focus-visible + .form__sub-title.calendar::before {
+  -webkit-filter: drop-shadow(0px 0px 50px #ffffff) drop-shadow(0px 0px 15px #ffffff) drop-shadow(0px 0px 5px #ffffff);
+          filter: drop-shadow(0px 0px 50px #ffffff) drop-shadow(0px 0px 15px #ffffff) drop-shadow(0px 0px 5px #ffffff);
+}
+
+.form__sub-conteiner {
+  font-size: inherit;
+  margin-bottom: 2.4em;
+  padding: var(--horisontal-padding);
+  padding-bottom: 0;
+}
+
+.form__sub-conteiner.time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form__sub-conteiner.time label {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--accent-color);
+  margin: 0 0.6rem 0.6rem 0;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  opacity: 1;
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.form__sub-conteiner.time input[type="radio"]:checked:not(:disabled) + label,
+.form__sub-conteiner.time input[type="radio"]:hover:not(:disabled) + label {
+  -webkit-box-shadow: 0 0 0 1px var(--white);
+          box-shadow: 0 0 0 1px var(--white);
+  opacity: 1;
+}
+
+.form__sub-conteiner.time input[type="radio"]:focus-visible + label {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  opacity: 1;
+}
+
+.form__sub-conteiner.time input[type="radio"]:disabled + label.disabled {
+  background-color: rgba(0, 0, 0, 0.25);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form__sub-conteiner.record {
+  padding: 1.5em var(--horisontal-padding) 0;
+}
+
+.form__sub-conteiner.form__text {
+  padding: 0 var(--horisontal-padding);
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__sub-conteiner.form__text input,
+.form__sub-conteiner.form__text textarea {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-size: 1em;
+  color: var(--white);
+  border-radius: 2em;
+  padding: 0.75em 1em;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--white);
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.form__sub-conteiner.form__text input:not(:last-child),
+.form__sub-conteiner.form__text textarea:not(:last-child) {
+  margin-bottom: 0.75em;
+}
+
+.form__sub-conteiner.form__text input:focus-visible::-webkit-input-placeholder, .form__sub-conteiner.form__text input:focus::-webkit-input-placeholder,
+.form__sub-conteiner.form__text textarea:focus-visible::-webkit-input-placeholder,
+.form__sub-conteiner.form__text textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__sub-conteiner.form__text input:focus-visible:-ms-input-placeholder, .form__sub-conteiner.form__text input:focus:-ms-input-placeholder,
+.form__sub-conteiner.form__text textarea:focus-visible:-ms-input-placeholder,
+.form__sub-conteiner.form__text textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__sub-conteiner.form__text input:focus-visible::-ms-input-placeholder, .form__sub-conteiner.form__text input:focus::-ms-input-placeholder,
+.form__sub-conteiner.form__text textarea:focus-visible::-ms-input-placeholder,
+.form__sub-conteiner.form__text textarea:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__sub-conteiner.form__text input:focus-visible::placeholder, .form__sub-conteiner.form__text input:focus::placeholder,
+.form__sub-conteiner.form__text textarea:focus-visible::placeholder,
+.form__sub-conteiner.form__text textarea:focus::placeholder {
+  color: transparent;
+}
+
+.form__sub-conteiner.form__text input:focus-visible,
+.form__sub-conteiner.form__text textarea:focus-visible {
+  -webkit-box-shadow: 0px 0px 20px var(--white);
+          box-shadow: 0px 0px 20px var(--white);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.form__sub-conteiner.form__text input::-webkit-input-placeholder,
+.form__sub-conteiner.form__text textarea::-webkit-input-placeholder {
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  color: var(--white-50);
+}
+
+.form__sub-conteiner.form__text input:-ms-input-placeholder,
+.form__sub-conteiner.form__text textarea:-ms-input-placeholder {
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  color: var(--white-50);
+}
+
+.form__sub-conteiner.form__text input::-ms-input-placeholder,
+.form__sub-conteiner.form__text textarea::-ms-input-placeholder {
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  color: var(--white-50);
+}
+
+.form__sub-conteiner.form__text input::placeholder,
+.form__sub-conteiner.form__text textarea::placeholder {
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  color: var(--white-50);
+}
+
+.form__sub-conteiner.form__text textarea {
+  resize: vertical;
+  min-height: 2.8em;
+}
+
+.form__sub-title.calendar + .form__sub-conteiner {
+  padding: var(--horisontal-padding) calc((100% - 353px) / 2) 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.6rem;
+}
+
+.form__sub-title.calendar + .form__sub-conteiner .week {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.45em;
+}
+
+.form__sub-title.calendar + .form__sub-conteiner label {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--accent-color);
+  text-align: center;
+  padding: 0.4em 0.5em;
+  border-radius: 30px;
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"]:checked + label {
+  -webkit-box-shadow: 0 0 0 1px var(--white);
+          box-shadow: 0 0 0 1px var(--white);
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"]:focus-visible + label {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"]:disabled + label {
+  opacity: 0.5;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].inaccessible + label,
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].inaccessible-the-month + label {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].inaccessible + label {
+  opacity: 0.25;
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].inaccessible-the-month + label {
+  opacity: 0.5;
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].next-month + label {
+  opacity: 0.5;
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].next-month:focus-visible + label,
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].next-month:hover + label {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].inaccessible + label,
+.form__sub-title.calendar + .form__sub-conteiner input[type="radio"].next-month + label {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.form__info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+.form__info:not(:last-child) {
+  margin-bottom: 0.6em;
+}
+
+.form__info span {
+  font-weight: 500;
+  font-size: 1.6em;
+  color: var(--white);
+}
+
+.form__info span:nth-child(2) {
+  font-weight: bold;
+  padding-left: 0.625em;
+}
+
+.form .sign {
+  font-size: 2.4rem;
+}
+
+.form .sign:disabled {
+  background-color: var(--bg-color);
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.form button.sign {
+  position: fixed;
+  bottom: 5.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 100000;
+}
+
+.form input[type="radio"],
+.form input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+
+@-webkit-keyframes img-levitation {
+  from {
+    -webkit-transform: translateY(10%) rotate(85deg);
+            transform: translateY(10%) rotate(85deg);
+  }
+  to {
+    -webkit-transform: translateY(-10%) rotate(65deg);
+            transform: translateY(-10%) rotate(65deg);
+  }
+}
+
+@keyframes img-levitation {
+  from {
+    -webkit-transform: translateY(10%) rotate(85deg);
+            transform: translateY(10%) rotate(85deg);
+  }
+  to {
+    -webkit-transform: translateY(-10%) rotate(65deg);
+            transform: translateY(-10%) rotate(65deg);
+  }
+}
+
+@media (min-width: 560px) {
+  .form {
+    --media-padding: calc((100% - 416px) / 2);
+  }
+  .form__sub-title.calendar {
+    --horisontal-padding: var(--media-padding);
+  }
+  .form__sub-title.calendar::after, .form__sub-title.calendar::before {
+    right: var(--horisontal-padding);
+  }
+  .form__item > *:not(.sign) {
+    padding-left: var(--media-padding) !important;
+    padding-right: var(--media-padding) !important;
+  }
+}
+
+@media (max-width: 353px) {
+  .form__sub-title.calendar + .form__sub-conteiner {
+    padding: var(--horisontal-padding) calc((100% - 80vw) / 2) 1rem;
+  }
+  .form__sub-title.calendar + .form__sub-conteiner .week {
+    font-size: 4vw;
+  }
+  .form__sub-title.calendar + .form__sub-conteiner label {
+    font-size: 3.5vw;
+  }
+}

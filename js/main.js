@@ -1,7 +1,8 @@
 //Preloader
 let log = false
-if (getRandomInt(10) - 7 > 0) localStorage.removeItem('loader')
+if (getRandomInt(10) - 9 > 0) localStorage.removeItem('loader')
 if (!localStorage.getItem('loader')) {
+	document.querySelector('head').innerHTML += `<link rel="stylesheet" href="/css/loader.css" type="text/css">`
 	document.querySelector('body').innerHTML += `<section class="loader">
 	<div class="icon">
 		<div class="lamp"></div>
@@ -41,14 +42,17 @@ rootCSS.setProperty(`--bg-color-25`, `${colorHexA(documentVarCSS('--bg-color'), 
 rootCSS.setProperty(`--bg-color-65`, `${colorHexA(documentVarCSS('--bg-color'), 65)}`)
 rootCSS.setProperty(`--bg-color-90`, `${colorHexA(documentVarCSS('--bg-color'), 90)}`)
 rootCSS.setProperty(`--white-25`, `${colorHexA(documentVarCSS('--white'), 25)}`)
+rootCSS.setProperty(`--white-50`, `${colorHexA(documentVarCSS('--white'), 50)}`)
 
 const main = document.querySelector('main')
 const navButton = document.querySelector('.navigation')
 const header = document.querySelector('header.header')
+const b = document.querySelector('body')
 
 navButton.addEventListener('click', () => {
 	header.classList.toggle('active')
 	main.classList.toggle('blur')
+	b.classList.toggle('noscroll')
 })
 
 function documentVarCSS(name) {
@@ -70,5 +74,9 @@ function getRandomInt(max) {
 
 // window.location.pathname
 // console.log(`${location.pathname}`.slice(1, -11));
-document.querySelector(`#${location.pathname.toString().slice(1, -11)}`).classList.add('active')
-// : "/MyWork/index.html"
+
+
+if (location.pathname.toString().slice(1, -5) != "index" && location.pathname != '\/') {
+	document.querySelector(`#${location.pathname.toString().slice(1, -5)}`).classList.add('active')
+}
+

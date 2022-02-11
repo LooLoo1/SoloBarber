@@ -1,0 +1,415 @@
+:root {
+  --redL: #ff0000;
+  --blueL: #0029ff;
+  --whiteL: #fff;
+}
+
+.loader {
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  z-index: 10000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--bg-color);
+  -webkit-box-shadow: inset 0px 0px 25vmin #000000;
+          box-shadow: inset 0px 0px 25vmin #000000;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.loader .icon {
+  position: relative;
+  width: 67px;
+  height: 278px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+.loader .icon .lamp {
+  position: relative;
+  width: 65px;
+  height: 65px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff, 0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 130px #ffffff, 0px 0px 20px rgba(0, 0, 0, 0.1), inset 0px 0px 25px #ffffff;
+          box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff, 0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 130px #ffffff, 0px 0px 20px rgba(0, 0, 0, 0.1), inset 0px 0px 25px #ffffff;
+  border-radius: 50%;
+}
+
+.loader .icon .lamp::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.1;
+  -webkit-animation: lamp 5s linear both;
+          animation: lamp 5s linear both;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff, 0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 135px #ffffff;
+          box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff, 0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 135px #ffffff;
+  border-radius: 118.681px;
+}
+
+.loader .icon .metal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.loader .icon .metal div {
+  background: -webkit-gradient(linear, left top, right top, from(#76818a), color-stop(8%, #aeb6bc), color-stop(17%, #fdfcf3), color-stop(36%, #fdfcf3), color-stop(55%, #aeb6bc), color-stop(85%, #2f2d32), color-stop(90%, #2f2d32), to(#121212));
+  background: linear-gradient(90deg, #76818a 0%, #aeb6bc 8%, #fdfcf3 17%, #fdfcf3 36%, #aeb6bc 55%, #2f2d32 85%, #2f2d32 90%, #121212 100%);
+}
+
+.loader .icon .metal:nth-child(2) div {
+  -webkit-box-shadow: 0px -1.75px 2.7px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(255, 255, 255, 0.2);
+          box-shadow: 0px -1.75px 2.7px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(255, 255, 255, 0.2);
+}
+
+.loader .icon .metal:nth-child(2) div:nth-child(1) {
+  width: 35px;
+  height: 4px;
+  border-radius: 2.5px 2.5px 0px 0px;
+}
+
+.loader .icon .metal:nth-child(2) div:nth-child(2) {
+  width: 48px;
+  height: 9px;
+  border-radius: 2.5px 2.5px 0px 0px;
+}
+
+.loader .icon .metal:nth-child(2) div:nth-child(3) {
+  width: 57px;
+  height: 13px;
+  border-radius: 2.5px 2.5px 4.5px 4.5px;
+}
+
+.loader .icon .metal:nth-child(2) div:nth-child(4) {
+  width: 48px;
+  height: 7px;
+  border-radius: 0px 0px 2.5px 2.5px;
+}
+
+.loader .icon .metal:nth-child(2) div:nth-child(5) {
+  width: 45px;
+  height: 4px;
+  border-radius: 0px 0px 2.5px 2.5px;
+}
+
+.loader .icon .metal:nth-child(4) div:nth-child(1),
+.loader .icon .metal:nth-child(4) div:nth-child(2) {
+  -webkit-box-shadow: 0px 1.75px 2.6px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1.75px 2.6px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(0, 0, 0, 0.2);
+}
+
+.loader .icon .metal:nth-child(4) div:nth-child(3) {
+  -webkit-box-shadow: 0px 1.75px 6px rgba(0, 0, 0, 0.5), inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 1.75px 6px rgba(0, 0, 0, 0.5), inset 0px 0px 7px rgba(0, 0, 0, 0.5);
+}
+
+.loader .icon .metal:nth-child(4) div:nth-child(4) {
+  -webkit-box-shadow: 0px 1.75px 3px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 1.75px 3px rgba(0, 0, 0, 0.25), inset 0px 0px 7px rgba(0, 0, 0, 0.6);
+}
+
+.loader .icon .metal:nth-child(4) div:nth-child(1) {
+  width: 45px;
+  height: 5px;
+  border-radius: 2.5px 2.5px 0px 0px;
+}
+
+.loader .icon .metal:nth-child(4) div:nth-child(2) {
+  width: 50px;
+  height: 7px;
+  border-radius: 2.5px 2.5px 0px 0px;
+}
+
+.loader .icon .metal:nth-child(4) div:nth-child(3) {
+  width: 57px;
+  height: 13px;
+  border-radius: 4.5px 4.5px 2.5px 2.5px;
+}
+
+.loader .icon .metal:nth-child(4) div:nth-child(4) {
+  width: 50px;
+  height: 25px;
+  border-radius: 0px 0px 22px 22px;
+}
+
+.loader .icon .gradient {
+  position: relative;
+  width: 30px;
+  height: 130px;
+  --angle: 60deg;
+  background: repeating-linear-gradient(var(--angle), var(--whiteL) 0 10px, var(--redL) 10px 20px, var(--whiteL) 20px 30px, var(--blueL) 30px 40px);
+  -webkit-box-shadow: inset 10px 0px 16px rgba(255, 255, 255, 0.25), inset -5px 0px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 10px 0px 16px rgba(255, 255, 255, 0.25), inset -5px 0px 8px rgba(0, 0, 0, 0.25);
+  background-size: 156% 100%;
+  animation: barberColorss 50s reverse linear infinite;
+}
+
+.loader .icon .gradient::before, .loader .icon .gradient::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.loader .icon .gradient::before {
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(50%, rgba(255, 255, 255, 0.5)), to(#ffffff));
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.5) 50%, #ffffff 100%);
+  -webkit-box-shadow: inset -1.75px 0px 5px #ffffff, inset 1.75px 0px 5px #ffffff;
+          box-shadow: inset -1.75px 0px 5px #ffffff, inset 1.75px 0px 5px #ffffff;
+  width: 130%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.loader .icon .gradient::after {
+  -webkit-box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff, 0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 135px #ffffff, inset 0px 0px 15px #ffffff, inset 0px 0px 5px #ffffff;
+          box-shadow: 0px 0px 5px #ffffff, 0px 0px 15px #ffffff, 0px 0px 25px #ffffff, 0px 0px 45px #ffffff, 0px 0px 65px #ffffff, 0px 0px 90px #ffffff, 0px 0px 135px #ffffff, inset 0px 0px 15px #ffffff, inset 0px 0px 5px #ffffff;
+}
+
+.loader .load {
+  position: relative;
+  width: 75%;
+  width: 316px;
+  height: 7px;
+  border-radius: 25px;
+  background-color: var(--white);
+  -webkit-box-shadow: 0px 0px 10px #000000, inset 0px 0px 4px #000000;
+          box-shadow: 0px 0px 10px #000000, inset 0px 0px 4px #000000;
+}
+
+.loader .load:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
+.loader .load::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  border-radius: 25px;
+  --d: 145px;
+  --angle: 35deg;
+  --sinus: 0.81915204;
+  -webkit-transition: all 3s linear;
+  transition: all 3s linear;
+  background: repeating-linear-gradient(var(--angle), var(--whiteL) 0 25px, var(--redL) 25px 50px, var(--whiteL) 50px 75px, var(--blueL) 75px 100px);
+  background-size: calc(var(--d) / var(--sinus)) 100%;
+  -webkit-box-shadow: 0px 0px 5px var(--whiteL), 0px 0px 15px var(--whiteL), 0px 0px 25px var(--whiteL), 0px 0px 45px var(--whiteL), 0px 0px 65px var(--whiteL), 0px 0px 90px var(--whiteL), 0px 0px 135px var(--whiteL), inset 0px 0px 15px var(--whiteL), inset 0px 0px 5px var(--whiteL);
+          box-shadow: 0px 0px 5px var(--whiteL), 0px 0px 15px var(--whiteL), 0px 0px 25px var(--whiteL), 0px 0px 45px var(--whiteL), 0px 0px 65px var(--whiteL), 0px 0px 90px var(--whiteL), 0px 0px 135px var(--whiteL), inset 0px 0px 15px var(--whiteL), inset 0px 0px 5px var(--whiteL);
+  -webkit-animation: barberColors 1s linear infinite, load 3s ease-in-out both;
+          animation: barberColors 1s linear infinite, load 3s ease-in-out both;
+}
+
+.loader .sign {
+  font-size: 2.4rem;
+}
+
+.loader .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 38vmax;
+  color: #f2f0f1;
+  pointer-events: none;
+  opacity: 0.25;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.loader.del {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader.del .gradient,
+.loader.del .load::after {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.loader.error .icon .lamp {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.loader.error .icon .lamp::after {
+  background: radial-gradient(10% 10% at 25% 65%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(25% 25% at 65% 40%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.01)), to(rgba(255, 255, 255, 0.01)));
+  background: radial-gradient(10% 10% at 25% 65%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(25% 25% at 65% 40%, #ffffff 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01));
+  -webkit-box-shadow: inset 0px 0px 25px #ffffff;
+          box-shadow: inset 0px 0px 25px #ffffff;
+  z-index: -1;
+  -webkit-animation: none;
+          animation: none;
+  opacity: 1;
+}
+
+.loader.error .icon .gradient {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.loader.error .icon .gradient::before {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(20%, #ffffff), color-stop(25%, #ffffff), color-stop(74%, rgba(255, 255, 255, 0.25)), color-stop(76%, rgba(255, 255, 255, 0.75)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 20%, #ffffff 25%, rgba(255, 255, 255, 0.25) 74%, rgba(255, 255, 255, 0.75) 76%, rgba(255, 255, 255, 0) 100%);
+}
+
+.loader.error .icon .gradient::after {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.loader.error .load::after {
+  animation: barberColors 1s linear infinite, load 3s ease-in-out reverse both;
+  opacity: 0;
+}
+
+.loader.error .sign {
+  position: relative;
+  background-color: transparent;
+}
+
+.loader.error .sign::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--white);
+  border-radius: inherit;
+  -webkit-box-shadow: inset 0px 0px 3em #000000;
+          box-shadow: inset 0px 0px 3em #000000;
+  z-index: -1;
+  -webkit-transition: -webkit-box-shadow var(--transition);
+  transition: -webkit-box-shadow var(--transition);
+  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), -webkit-box-shadow var(--transition);
+}
+
+.loader.error .sign:hover::after, .loader.error .sign:focus-visible::after {
+  -webkit-box-shadow: inset 0px 0px 4em #000000;
+          box-shadow: inset 0px 0px 4em #000000;
+}
+
+.loader.error .sign:focus-visible {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@-webkit-keyframes barberColors {
+  100% {
+    background-position: calc(var(--d) / var(--sinus)) 100%;
+  }
+}
+
+@keyframes barberColors {
+  100% {
+    background-position: calc(var(--d) / var(--sinus)) 100%;
+  }
+}
+
+@-webkit-keyframes barberColorss {
+  100% {
+    background-position: -10000% 100%;
+  }
+}
+
+@keyframes barberColorss {
+  100% {
+    background-position: -10000% 100%;
+  }
+}
+
+@-webkit-keyframes load {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes load {
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes lamp {
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes lamp {
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-height: 400px) {
+  .loader .icon {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    margin-bottom: 0px;
+  }
+  .loader .load {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@media (orientation: landscape) {
+  .loader .bg-text {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+}

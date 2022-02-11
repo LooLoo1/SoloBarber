@@ -1,0 +1,186 @@
+:root {
+  --discount-color: #920000;
+  --discount-color-hover: #92271a;
+}
+
+main {
+  padding-top: calc(var(--header-H) + 25px + 30px + 2rem + 3.6rem);
+}
+
+.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem calc(55px + 55px + 65px);
+}
+
+.list__item {
+  max-width: 750px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 1.5rem 3rem 1.5rem 2rem;
+  background-color: var(--bg-color);
+  position: relative;
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+}
+
+.list__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.list__item:hover::before, .list__item:focus-visible::before {
+  opacity: 1;
+}
+
+.list__item:focus-visible {
+  -webkit-box-shadow: 0px 0px 20px var(--accent-color);
+          box-shadow: 0px 0px 20px var(--accent-color);
+}
+
+.list__item::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity var(--transition);
+  transition: opacity var(--transition);
+  opacity: 0;
+}
+
+.list__item .name,
+.list__item .price,
+.list__item .discount {
+  font-size: 1.8rem;
+  color: var(--white);
+}
+
+.list__item .name {
+  position: relative;
+  font-weight: 500;
+  padding-left: 1.2rem;
+  margin-right: auto;
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+}
+
+.list__item .name::before {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  left: 0;
+  top: 0.5em;
+  -webkit-transition: inherit;
+  transition: inherit;
+}
+
+.list__item .name .description {
+  font-size: 0.666em;
+  display: block;
+}
+
+.list__item .discount,
+.list__item .price {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.4rem 1rem;
+}
+
+.list__item .price {
+  margin-left: 3rem;
+  position: relative;
+  background-color: var(--accent-color);
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+}
+
+.list__item .price::after {
+  position: absolute;
+  content: attr(data-currency);
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  top: -15%;
+  right: -30%;
+  background-color: inherit;
+  font-size: 0.55em;
+  padding: 0 0.4rem 0.2rem;
+  -webkit-box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.list__item .discount {
+  position: relative;
+  z-index: 5;
+  margin-left: 1.5rem;
+  background-color: var(--discount-color);
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+}
+
+.list__item .discount + .price {
+  margin-left: 0.4rem;
+  background-color: var(--discount-color-hover);
+}
+
+.list input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+
+.list input[type="checkbox"]:checked + label::before {
+  opacity: 1;
+}
+
+.list input[type="checkbox"]:checked + label .price,
+.list input[type="checkbox"]:checked + label .discount {
+  -webkit-box-shadow: 0 0 0 1px var(--white);
+          box-shadow: 0 0 0 1px var(--white);
+}
+
+.list input[type="checkbox"]:checked + label .price::after,
+.list input[type="checkbox"]:checked + label .discount::after {
+  -webkit-box-shadow: 0px 4px 25px #000000;
+          box-shadow: 0px 4px 25px #000000;
+  top: -20%;
+  right: -35%;
+}
+
+.list input[type="checkbox"]:focus-visible + label {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 0px 0px 20px #924e34;
+          box-shadow: 0px 0px 20px #924e34;
+}

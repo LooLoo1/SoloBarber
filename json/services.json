@@ -1,0 +1,167 @@
+[
+	{
+		"name": "Чоловіча стрижка",
+		"price": {
+			"value": 160,
+			"currency": "грн"
+		}
+	},
+	{
+		"name": "Стрижка лайт",
+		"subName": "(Швидка стрижка машинкою)",
+		"price": {
+			"value": 100,
+			"currency": "грн"
+		}
+	},
+	{
+		"name": "Стрижка і моделювання бороди",
+		"price": {
+			"value": 110,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/Bg-img.png"
+		]
+	},
+	{
+		"name": "Дитяча стрижка до 10 років",
+		"price": {
+			"value": 120,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/fWyifW-min.jpg",
+			"/IMG/works/rus-1294x1600-min.jpg",
+			"/IMG/works/photo_3.jpg"
+		]
+	},
+	{
+		"name": "Королівське гоління",
+		"price": {
+			"value": 100,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/photo_3.jpg",
+			"/IMG/works/rus-1294x1600-min.jpg",
+			"/IMG/works/80pqSy-min.jpg"
+		]
+	},
+	{
+		"name": "Камуфлювання сивини",
+		"price": {
+			"value": 150,
+			"currency": "грн"
+		}
+	},
+	{
+		"name": "Камуфлювання бороди",
+		"price": {
+			"value": 100,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/model-dlya-strizhek--muzhskaya-strizhka--barber--barbershop-photo-035d-min.jpg",
+			"/IMG/works/fWyifW-min.jpg",
+			"/IMG/works/rus-1294x1600-min.jpg"
+		]
+	},
+	{
+		"name": "Чорна маска",
+		"price": {
+			"value": 50,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/photo_3.jpg",
+			"/IMG/works/80pqSy-min.jpg",
+			"/IMG/works/fWyifW-min.jpg"
+		]
+	},
+	{
+		"name": "Корекція брів ниткою",
+		"price": {
+			"value": 50,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/rus-1294x1600-min.jpg",
+			"/IMG/works/fWyifW-min.jpg",
+			"/IMG/works/model-dlya-strizhek--muzhskaya-strizhka--barber--barbershop-photo-035d-min.jpg"
+		]
+	},
+	{
+		"name": "Укладка",
+		"price": {
+			"value": 50,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/fWyifW-min.jpg",
+			"/IMG/works/80pqSy-min.jpg",
+			"/IMG/works/rus-1294x1600-min.jpg"
+		]
+	},
+	{
+		"name": "Віск",
+		"price": {
+			"value": 50,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/model-dlya-strizhek--muzhskaya-strizhka--barber--barbershop-photo-035d-min.jpg",
+			"/IMG/works/fWyifW-min.jpg",
+			"/IMG/works/photo_3.jpg"
+		]
+	},
+	{
+		"name": "Депіляція воском",
+		"price": {
+			"value": 50,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/m899gw-min.jpg",
+			"/IMG/works/rus-1294x1600-min.jpg",
+			"/IMG/works/80pqSy-min.jpg"
+		]
+	},
+	{
+		"name": "Чистка вух",
+		"price": {
+			"value": 100,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/model-dlya-strizhek--muzhskaya-strizhka--barber--barbershop-photo-035d-min.jpg",
+			"/IMG/works/fWyifW-min.jpg",
+			"/IMG/works/rus-1294x1600-min.jpg"
+		]
+	},
+	{
+		"name": "Хейр - туту",
+		"price": {
+			"value": 30,
+			"currency": "грн"
+		},
+		"imgList": [
+			"/IMG/works/80pqSy-min.jpg",
+			"/IMG/works/photo_3.jpg",
+			"/IMG/works/fWyifW-min.jpg"
+		]
+	},
+	{
+		"name": "Батько + Син",
+		"price": {
+			"value": 160,
+			"currency": "грн"
+		},
+		"discount": true,
+		"imgList": [
+			"/IMG/works/fWyifW-min.jpg",
+			"/IMG/works/80pqSy-min.jpg",
+			"/IMG/works/rus-1294x1600-min.jpg"
+		]
+	}
+]

@@ -1,0 +1,265 @@
+.popup {
+  font-size: 1vmin;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color);
+  padding: 7rem 0 8rem !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100000000;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.popup.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: painted;
+}
+
+.popup.hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.popup__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.popup__slider-item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.popup__slider-item.active {
+  pointer-events: painted;
+  opacity: 1;
+}
+
+.popup__slider-item.re-size {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.popup .name {
+  position: relative;
+  font-size: 3.6rem;
+  padding: 1rem;
+  width: 100%;
+  -webkit-box-shadow: 0 0 0 1px var(--white);
+          box-shadow: 0 0 0 1px var(--white);
+  -webkit-transition: all var(--transition);
+  transition: all var(--transition);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.popup .name.visible {
+  opacity: 1;
+}
+
+.popup .name.hidden {
+  opacity: 0;
+}
+
+.popup .price {
+  position: relative;
+  font-size: 5.5rem;
+  padding: 1rem 3rem;
+  font-weight: bold;
+  -webkit-box-shadow: 0 0 0 3px var(--white);
+          box-shadow: 0 0 0 3px var(--white);
+  margin-bottom: 1.5rem;
+  margin-top: auto;
+}
+
+.popup .price::after {
+  position: absolute;
+  content: attr(data-currency);
+  top: -25%;
+  right: -30%;
+  background-color: inherit;
+  font-size: 3rem;
+  padding: 0 1rem 0.5rem;
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+}
+
+.popup .date {
+  font-size: 1.8rem;
+  padding: 1rem 1.2rem;
+}
+
+.popup .name,
+.popup .price,
+.popup .date {
+  text-align: center;
+  color: var(--white);
+  background-color: var(--accent-color);
+}
+
+.popup .close {
+  position: relative;
+  margin-top: 4.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  cursor: pointer;
+  -webkit-transition: -webkit-transform var(--transition);
+  transition: -webkit-transform var(--transition);
+  transition: transform var(--transition);
+  transition: transform var(--transition), -webkit-transform var(--transition);
+  z-index: 100000;
+}
+
+.popup .close::after, .popup .close::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 3px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: var(--white);
+}
+
+.popup .close::before {
+  -webkit-transform: translate(-50%, -50%) rotate(-90deg);
+          transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+.popup .close:focus-visible, .popup .close:hover {
+  -webkit-transform: rotate(45deg) scale(1.2);
+          transform: rotate(45deg) scale(1.2);
+}
+
+.popup .arrows {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.popup .arrows__item {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform var(--transition);
+  transition: -webkit-transform var(--transition);
+  transition: transform var(--transition);
+  transition: transform var(--transition), -webkit-transform var(--transition);
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  --padding-arrows: 2rem;
+  --arrow-size: 2.5rem;
+}
+
+.popup .arrows__item::after, .popup .arrows__item::before {
+  content: "";
+  position: absolute;
+  left: var(--padding-arrows);
+  top: 50%;
+  width: 3px;
+  height: var(--arrow-size);
+  background-color: var(--white);
+}
+
+.popup .arrows__item.prev {
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.popup .arrows__item.prev::after {
+  -webkit-transform: translateY(-49%) skew(-25deg);
+          transform: translateY(-49%) skew(-25deg);
+}
+
+.popup .arrows__item.prev::before {
+  -webkit-transform: translateY(49%) skew(25deg);
+          transform: translateY(49%) skew(25deg);
+}
+
+.popup .arrows__item.next {
+  -webkit-transform-origin: center right;
+          transform-origin: center right;
+}
+
+.popup .arrows__item.next::after, .popup .arrows__item.next::before {
+  left: auto;
+  right: var(--padding-arrows);
+}
+
+.popup .arrows__item.next::after {
+  -webkit-transform: translateY(-49%) skew(25deg);
+          transform: translateY(-49%) skew(25deg);
+}
+
+.popup .arrows__item.next::before {
+  -webkit-transform: translateY(49%) skew(-25deg);
+          transform: translateY(49%) skew(-25deg);
+}
+
+.popup .arrows__item:focus-visible, .popup .arrows__item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.popup.list .arrows {
+  opacity: 1;
+}
+
+.popup.list .arrows__item {
+  pointer-events: painted;
+}
+
+@media (min-width: 1024px), (orientation: landscape) {
+  .popup {
+    padding-top: 1rem;
+  }
+  .popup .close,
+  .popup .price,
+  .popup .date {
+    margin-left: auto;
+    margin-right: 10rem;
+  }
+}
