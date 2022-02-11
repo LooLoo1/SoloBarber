@@ -3,8 +3,8 @@ let topWorksJSON
 topWorksJson()
 
 function topWorksJson() {
-	// fetch("/json/services.json")
-	fetch("/json/topWorks.json")
+	// fetch("/SoloBarber/json/services.json")
+	fetch("/SoloBarber/json/topWorks.json")
 		.then(response => response.json())
 		.then(json => {
 			topWorksJSON = json

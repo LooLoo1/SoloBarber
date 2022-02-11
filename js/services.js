@@ -3,7 +3,7 @@ let servicesJSON
 servicesJson()
 
 function servicesJson() {
-	fetch("/json/services.json")
+	fetch("/SoloBarber/json/services.json")
 		.then(response => response.json())
 		.then(json => {
 			servicesJSON = json
