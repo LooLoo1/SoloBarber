@@ -58,11 +58,11 @@ function createFormTime(y, m, d) {
 			elLabel.dataset.index = index
 			elLabel.className = ` `
 
-			if (y != undefined) {
+			if (y) {
 				if (today.getFullYear() == selectDay.getFullYear()
 					&& today.getMonth() == selectDay.getMonth()
 					&& today.getDate() == selectDay.getDate()
-					&& today.getHours() >= i
+					// && today.getHours() >= i
 				) {
 					elLabel.className = `disabled`
 					elInp.disabled = true

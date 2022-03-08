@@ -208,9 +208,11 @@ function fillingСalendar(d, MDN, month = 0) {
 			}
 		}
 
-		calendarLabels[i].addEventListener('click', () => {
-			createFormTime(d.getFullYear(), dateMonth, dateNum)
-		})
+		if (!calendarInput[i].disabled) {
+			calendarLabels[i].addEventListener('click', () => {
+				createFormTime(d.getFullYear(), dateMonth, dateNum)
+			})
+		}
 		calendarLabels[i].innerText = dateNum
 		let dataDate = `${(dateNum < 10) ? '0' + dateNum : dateNum}.${(dateMonth < 10) ? '0' + (dateMonth + 1) : dateMonth + 1}.${d.getFullYear()} `
 		calendarInput[i].dataset.date = dataDate
