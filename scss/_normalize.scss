@@ -24,9 +24,9 @@
 
 @font-face {
 	font-family: "The-Brands";
-	src: url("/SoloBarber/font/TheBrands.eot");
-	src: url("/SoloBarber/font/TheBrands.ttf") format("truetype"), url("/SoloBarber/font/TheBrands.woff") format("woff"),
-		url("/SoloBarber/font/TheBrands.woff2") format("woff2");
+	src: url("/font/TheBrands.eot");
+	src: url("/font/TheBrands.ttf") format("truetype"), url("/font/TheBrands.woff") format("woff"),
+		url("/font/TheBrands.woff2") format("woff2");
 	font-style: normal;
 	font-weight: normal;
 }
@@ -248,7 +248,7 @@ main.blur {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		background: center/cover url(/SoloBarber/IMG/icon/Instagram.svg);
+		background: center/cover url(/IMG/icon/Instagram.svg);
 	}
 }
 

@@ -1,6 +1,6 @@
 [
 	{
-		"img": "/SoloBarber/IMG/works/T24Ed7-min.jpg",
+		"img": "/IMG/works/T24Ed7-min.jpg",
 		"name": "Чоловіча стрижка",
 		"price": {
 			"value": 100,
@@ -9,7 +9,7 @@
 		"date": "23.11.2021"
 	},
 	{
-		"img": "/SoloBarber/IMG/works/photo_1.jpg",
+		"img": "/IMG/works/photo_1.jpg",
 		"name": "Стрижка лайт",
 		"price": {
 			"value": 140,
@@ -18,7 +18,7 @@
 		"date": "20.11.2021"
 	},
 	{
-		"img": "/SoloBarber/IMG/works/photo_2.jpg",
+		"img": "/IMG/works/photo_2.jpg",
 		"name": "Стрижка лайт",
 		"price": {
 			"value": 190,
@@ -27,7 +27,7 @@
 		"date": "05.11.2021"
 	},
 	{
-		"img": "/SoloBarber/IMG/works/photo_3.jpg",
+		"img": "/IMG/works/photo_3.jpg",
 		"name": "Чоловіча стрижка",
 		"price": {
 			"value": 100,
@@ -36,7 +36,7 @@
 		"date": "22.11.2021"
 	},
 	{
-		"img": "/SoloBarber/IMG/works/m899gw-min.jpg",
+		"img": "/IMG/works/m899gw-min.jpg",
 		"name": "Стрижка лайт",
 		"price": {
 			"value": 100,
@@ -45,7 +45,7 @@
 		"date": "02.12.2021"
 	},
 	{
-		"img": "/SoloBarber/IMG/works/fWyifW-min.jpg",
+		"img": "/IMG/works/fWyifW-min.jpg",
 		"name": "Камуфлювання сивини",
 		"price": {
 			"value": 100,
@@ -54,7 +54,7 @@
 		"date": "04.12.2021"
 	},
 	{
-		"img": "/SoloBarber/IMG/works/original_5cf5faba86dba64e0b1ed811_5cf5fc2656cd4-min.jpg",
+		"img": "/IMG/works/original_5cf5faba86dba64e0b1ed811_5cf5fc2656cd4-min.jpg",
 		"name": "Чоловіча стрижка",
 		"price": {
 			"value": 180,

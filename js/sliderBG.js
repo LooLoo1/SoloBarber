@@ -1,11 +1,11 @@
-const sliderList = ['/SoloBarber/IMG/Bg-img.png',
-	'/SoloBarber/IMG/Web-site_bg/3U4A8150-min.jpg',
-	'/SoloBarber/IMG/Web-site_bg/AdobeStock_132121537_копия-min.jpg',
-	'/SoloBarber/IMG/Web-site_bg/barber-like-ad-768x417-min.jpg',
-	'/SoloBarber/IMG/Web-site_bg/barber-shop-main-bg-min.jpg',
-	'/SoloBarber/IMG/Web-site_bg/d8ac3781-how-to-start-a-barber-shop-in-8-steps-min.jpg',
-	'/SoloBarber/IMG/Web-site_bg/generic-barber-shop-and-whiskey-2-min.jpg',
-	'/SoloBarber/IMG/Web-site_bg/shutterstock_629193110-802x454-min.jpg'
+const sliderList = ['/IMG/Bg-img.png',
+	'/IMG/Web-site_bg/3U4A8150-min.jpg',
+	'/IMG/Web-site_bg/AdobeStock_132121537_копия-min.jpg',
+	'/IMG/Web-site_bg/barber-like-ad-768x417-min.jpg',
+	'/IMG/Web-site_bg/barber-shop-main-bg-min.jpg',
+	'/IMG/Web-site_bg/d8ac3781-how-to-start-a-barber-shop-in-8-steps-min.jpg',
+	'/IMG/Web-site_bg/generic-barber-shop-and-whiskey-2-min.jpg',
+	'/IMG/Web-site_bg/shutterstock_629193110-802x454-min.jpg'
 ]
 
 const sliderConteiner = document.querySelector('.slider')

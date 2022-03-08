@@ -1,7 +1,7 @@
 const reviewsButton = document.querySelector(".reveal")
 const reviewsList = document.querySelector(".reviews__list")
 function reviewsAdd() {
-	fetch("/SoloBarber/json/reviews.json")
+	fetch("/json/reviews.json")
 		.then(response => response.json())
 		.then(json => {
 			// console.log(json)
