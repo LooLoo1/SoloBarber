@@ -8,8 +8,10 @@
 1. Lazy background slider (all pages are the same as the image index is stored in local storage),
 2. List of reviews extracted from the JSON file
 3. The "My work" list is formed from the JSON file, as well as the list of services
-4. Photos can be opened in full screen format, and the service will open a slider with several examples of procedures
-5. Individual calendar, which is created independently and returns the exact date for one of the items for the haircut
+4. Photos can be opened in full screen format, and the service will open a slider with several examples of 
+   procedures
+5. Individual calendar, which is created independently and returns the exact date for one of the items for 
+   the haircut
 6. Calculation of cost and working form that sends data by mail
 7. Page 404 and a beautiful download site
 ```
